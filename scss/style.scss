@@ -1,0 +1,208 @@
+//  base
+* {
+  /*завжди пишеться в код  */
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* щоб правилтно наслідувались властивості від батьків */
+}
+
+a {
+  color: inherit;
+  /* щоб наслідувався колір зсилок від батьків*/
+  text-decoration: none;
+  /* підкреслення */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body {
+  color: #4a4a4a;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.13px;
+  /* background-color: #839aa9; */
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+.header__container {
+  background-color: #2b4074;
+}
+.container {
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 18px;
+}
+.menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo__img {
+  padding-left: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.menu__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: none;
+  position: relative;
+  &::after {
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #2b4074;
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    box-shadow: 0 4px 0 0 #2b4074, 0 8px 0 0 #2b4074;
+  }
+}
+.slide {
+  background-image: url(../images/slider-img.jpg);
+  background-color: rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 60.3125vw;
+}
+.slide__title {
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto Condensed";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  padding-top: 36px;
+  padding-bottom: 93px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__fon {
+  background-color: #2b4074;
+  color: #fff;
+}
+.hero__title {
+  font-family: Roboto;
+  font-size: 24px;
+
+  font-weight: 500;
+  line-height: 1;
+  max-width: 250px;
+  padding-top: 40px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__text {
+  font-family: Dosis;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.12;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+.hero__button {
+  color: #2b4074;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 16px;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.servis {
+  padding: 25px 0 40px;
+  text-align: center;
+}
+.servis__title {
+  color: #2b4074;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 2px;
+
+  margin-bottom: 50px;
+  position: relative;
+}
+.servis__title::after {
+  content: "";
+  position: absolute;
+  background-color: #2b4074;
+  bottom: -20px;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.servis__rule {
+  color: #4a4a4a;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.servis__text {
+  color: #797979;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.13;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
