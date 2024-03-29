@@ -1,14 +1,60 @@
 @charset "UTF-8";
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-condensed-v27-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-condensed-v27-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dosis-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/dosis-v32-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dosis-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dosis-v32-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 * {
   /*завжди пишеться в код  */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* щоб правилтно наслідувались властивості від батьків */
 }
 
@@ -41,22 +87,12 @@ p {
 body {
   color: #4a4a4a;
   text-align: center;
-  -webkit-font-feature-settings: "clig" off, "liga" off;
-          font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.13px;
-  /* background-color: #839aa9; */
-}
-
-.container {
-  width: 100%;
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 16px;
 }
 
 ul {
@@ -67,24 +103,10 @@ ul {
   background-color: #2b4074;
 }
 
-.container {
-  width: 100%;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 18px;
-}
-
 .menu__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo__img {
@@ -110,17 +132,19 @@ ul {
   position: absolute;
   top: 15px;
   left: 14px;
-  -webkit-box-shadow: 0 4px 0 0 #2b4074, 0 8px 0 0 #2b4074;
-          box-shadow: 0 4px 0 0 #2b4074, 0 8px 0 0 #2b4074;
+  box-shadow: 0 4px 0 0 #2b4074, 0 8px 0 0 #2b4074;
 }
 
 .slide {
   background-image: url(../images/slider-img.jpg);
-  background-color: rgba(0, 0, 0, 0.25);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   min-height: 60.3125vw;
+}
+
+.hero__slider {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .slide__title {
@@ -185,8 +209,7 @@ ul {
 
 .servis__title {
   color: #2b4074;
-  -webkit-font-feature-settings: "clig" off, "liga" off;
-          font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: "Roboto Condensed";
   font-size: 24px;
   font-weight: 400;
@@ -212,8 +235,7 @@ ul {
 .servis__rule {
   color: #4a4a4a;
   text-align: center;
-  -webkit-font-feature-settings: "clig" off, "liga" off;
-          font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
@@ -223,8 +245,7 @@ ul {
 
 .servis__text {
   color: #797979;
-  -webkit-font-feature-settings: "clig" off, "liga" off;
-          font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 400;
@@ -232,4 +253,310 @@ ul {
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 96px;
 }
+
+.servis__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.servis__card {
+  width: 246px;
+  margin-bottom: 100px;
+}
+
+.card__img {
+  padding-top: 38px;
+  margin-bottom: 30px;
+}
+
+.card__title {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin-bottom: 21px;
+  color: #4a4a4a;
+}
+
+.card__text {
+  display: none;
+}
+
+.card__link {
+  display: none;
+  padding-bottom: 20px;
+}
+
+.servis__card:hover {
+  width: 246px;
+  height: 300px;
+  border: #2b4074 solid 4px;
+  align-items: center;
+  text-align: center;
+}
+
+.servis__card:hover .card__img {
+  padding-top: 38px;
+  margin-bottom: 14px;
+}
+
+.servis__card:hover .card__text {
+  display: block;
+  color: #9b9b9b;
+  font-family: Dosis;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 220px;
+  margin-bottom: 17px;
+  min-height: 48px;
+}
+
+.servis__card:hover .card__link {
+  display: block;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  padding-bottom: 28px;
+  color: #2b4074;
+}
+
+.projects {
+  background-image: linear-gradient(180deg, #2b4074 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.projects {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.project__title {
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.project__title::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  bottom: -20px;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects__inners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project__inner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 250px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  position: relative;
+}
+
+.fon {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.78);
+  min-height: 227px;
+  min-width: 254px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.project__inner:hover .fon {
+  opacity: 1;
+}
+
+.project__item-info,
+.project__item-search {
+  display: none;
+}
+
+.project__inner:hover .project__item-info {
+  display: flex;
+  z-index: 3;
+}
+
+.project__inner:hover .project__item-search {
+  display: flex;
+  z-index: 3;
+}
+
+.project__inner_wrap {
+  min-height: 250px;
+  min-width: 280px;
+}
+
+.project__item-link {
+  color: #2b4074;
+  margin-bottom: 20px;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.team {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.team__title {
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4a4a;
+  padding-top: 43px;
+  margin-bottom: 51px;
+  position: relative;
+}
+
+.team__title::after {
+  content: " ";
+  position: absolute;
+  background-color: #2b4074;
+  bottom: -20px;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  width: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team__content {
+  color: #9b9b9b;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.12;
+  max-width: 300px;
+  margin-bottom: 84px;
+}
+
+.team__button {
+  color: #f9f6e5;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 0.9;
+  background-color: #2b4074;
+  padding: 21px 26px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+
+.news {
+  background-color: #f9f6e5;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.news__title {
+  color: #4a4a4a;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  position: relative;
+  padding-top: 60px;
+}
+
+.news__title::after {
+  content: "";
+  position: absolute;
+  background-color: #2b4074;
+  bottom: -20px;
+  left: 10px;
+  right: 10px;
+  height: 8px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.news__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.news__item {
+  background-color: #fff;
+  border-radius: 4px;
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news__item-img {
+  max-width: 280px;
+  border-radius: 4px;
+}
+
+.news__item-title {
+  padding: 15px 0;
+  border-radius: 4px;
+  color: #4a4a4a;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=style.css.map */
