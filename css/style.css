@@ -1013,3 +1013,21 @@ li {
 .servis__card {
   margin-bottom: 50px;
 }
+
+.project__title {
+  font-size: 48px;
+}
+
+.project__item-link {
+  font-size: 20px;
+}
+
+.project__inner {
+  min-height: 460px;
+  min-width: 518px;
+}
+
+.fon {
+  min-width: 470px;
+  min-height: 418px;
+}
